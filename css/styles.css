@@ -1,9 +1,10 @@
 .about {
-  position: relative;
-  background-image: url(../images/map.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom; }
+    position: relative;
+    background-image: url(../images/map.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
 
 @-webkit-keyframes fadeIn {
   from {
@@ -3604,9 +3605,13 @@ a {
 .lead-diary {
   position: relative;
   margin-top: 177px;
+
   /* .filter-img {
         filter: grayscale(0%)!important;
     }*/ }
+    .lead-diary-carousel {
+        position: relative;
+    }
   .lead-diary .box-lead-diary.max-width {
     margin-top: 0px;
     max-width: 1239px; }
@@ -3665,6 +3670,7 @@ a {
       text-transform: uppercase; }
   .lead-diary .bookmarks {
     margin-top: 150px;
+    position: absolute;
     margin-right: 51px; }
     .lead-diary .bookmarks ul {
       display: block;
@@ -3697,6 +3703,9 @@ a {
   .lead-diary .leadDiaryCarousel .no-filter-img {
     -webkit-filter: grayscale(0%) !important;
     filter: grayscale(0%) !important; }
+  .lead-diary .leadDiaryCarousel .owl-stage {
+      margin-left: 121px;
+  }
   .lead-diary .leadDiaryCarousel .posts {
     padding: 20px 0px; }
     .lead-diary .leadDiaryCarousel .posts img {

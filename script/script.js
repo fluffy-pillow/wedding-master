@@ -927,27 +927,17 @@ $(function () {
             startPosition: 0
         });
 
-        r.on('resize.owl.carousel', function (event) {
-            let nestedOffsetX = $('.owl-stage-outer')[0].getBoundingClientRect().x
-            if (event.item.index > 0) {
-                $('.leadDiaryCarousel').css({
-                        'margin-left': (-nestedOffsetX/2)  + 'px',
-                        'width': 'calc(100% + ' + (nestedOffsetX/2) + 'px)'
-                    }
-                )
-            } else {
-                $('.leadDiaryCarousel').css({
-                        'margin-left': 0,
-                        'width': '100%'
-                    }
-                )
-            }
-        })
 
         r.on('changed.owl.carousel', function (event) {
             var items = $('.leadDiaryCarousel .item');
 
             var b = $(items[event.item.index]);
+
+            if (event.relatedTarget._drag["stage"]["start"].x < event.relatedTarget._drag["stage"]["current"].x) {
+                $(b.parent()[0]).css('opacity', 1)
+            } else {
+                $(b.parent()[0].previousElementSibling).css('opacity', 0)
+            }
 
             if ($('.leadDiaryCarousel').find('no-filter-img') && $('.leadDiaryCarousel').find('.owl-item-active')) {
                 $('.leadDiaryCarousel').find('.no-filter-img').removeClass('no-filter-img');
@@ -956,7 +946,9 @@ $(function () {
                 $(b).addClass('owl-item-active');
             }
 
-            let nestedOffsetX = $('.owl-stage-outer')[0].getBoundingClientRect().x
+
+
+/*            let nestedOffsetX = $('.owl-stage-outer')[0].getBoundingClientRect().x
             if (event.item.index > 0) {
                 $('.leadDiaryCarousel').css({
                         'margin-left': (-nestedOffsetX/2)  + 'px',
@@ -969,7 +961,7 @@ $(function () {
                         'width': '100%'
                     }
                 )
-            }
+            }*/
         })
     }
 
