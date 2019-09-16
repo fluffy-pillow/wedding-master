@@ -1,0 +1,100 @@
+$primary_color: #E3AE67;
+
+$font_open_sans: 'Open Sans',
+sans-serif;
+
+$font_yeseva_one: 'Yeseva One',
+cursive;
+
+.footer {
+    
+    footer {
+        width: 100%;
+        background-color: #222222;
+        padding: 44px 0px;
+        margin-top: 50px;
+
+        .box-footer {
+            color: #fff;
+            font-family: $font_open_sans;
+
+            .d-flex {
+                justify-content: space-between;
+                font-size: 10px;
+                align-items: center;
+
+                .by-studio {
+                    line-height: 160.86%;
+                    text-transform: uppercase;
+
+                }
+
+                .date-development {
+                    p {
+                        font-size: 8px;
+                        font-family: $font_open_sans;
+                        text-transform: uppercase;
+                        line-height: 160.86%;
+                    }
+                }
+
+                .footer-social {
+
+                    svg {
+                        margin-right: 10px;
+                        width: 20px;
+                        height: 20.38px;
+                        transition: 0.2s;
+                        opacity: 0.5;
+                    }
+
+                    svg:hover path {
+                        fill: $primary_color;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    @media (max-width: 767px) {
+
+        .box-footer {
+            padding: 0 30px;
+        }
+
+        .d-flex {
+            display: block;
+        }
+
+        footer .box-footer .d-flex .by-studio {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .footer-social {
+            float: right;
+            width: 125px;
+
+            svg {
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+
+    @media (min-width: 992px) and (max-width: 1238px) {
+
+        footer .box-footer {
+            padding: 0 30px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        footer .box-footer {
+            padding: 0 30px;
+        }
+    }
+}

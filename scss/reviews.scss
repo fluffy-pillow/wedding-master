@@ -1,0 +1,867 @@
+$primary_color: #E3AE67;
+
+$font_open_sans: 'Open Sans',
+sans-serif;
+
+$font_yeseva_one: 'Yeseva One',
+cursive;
+
+
+
+
+.reviews {
+    position: relative;
+
+    .bg-reviews {
+        background-color: #F7F7F7;
+    }
+
+    .fadeIn {
+        animation-name: fadeIn;
+    }
+
+    .fadeOut {
+        animation-name: fadeOut;
+    }
+
+    .first-carousel-wedding,
+    .first-carousel-corporate,
+    .first-carousel-agency {
+        width: 25%;
+    }
+
+    .second-carousel-wedding,
+    .second-carousel-corporate,
+    .second-carousel-agency {
+        width: 68%;
+
+        .slide-inner {
+            width: 100%;
+            height: 709px;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    }
+
+    .swiper-slide {
+        overflow: hidden;
+    }
+
+
+    .swiper-container {
+        width: 850px;
+        height: 709px;
+    }
+
+
+    .active-anim-left {
+        opacity: 0;
+        animation-name: moveTextLeft;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        position: relative;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        color: #000;
+        opacity: 1;
+    }
+
+
+    @keyframes moveTextLeft {
+        0% {
+            left: -200px;
+            opacity: 0;
+        }
+
+        100% {
+            left: 0px;
+            opacity: 1;
+        }
+    }
+
+    .active-anim-right {
+        opacity: 0;
+        animation-name: moveTextRight;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        position: relative;
+    }
+
+
+    @keyframes moveTextRight {
+        0% {
+            left: 200px;
+            opacity: 0;
+        }
+
+        100% {
+            left: 0px;
+            opacity: 1;
+        }
+    }
+
+    .box-reviews.max-width {
+        padding: 0 50px;
+        margin-top: 0px;
+        max-width: 1239px;
+    }
+
+    .title-section.d-flex {
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+
+    .title-links.d-flex {
+        justify-content: space-between;
+        align-items: center;
+
+        .back-num {
+            font-size: 250px;
+            color: #cdcdcd;
+            font-family: sans-serif;
+        }
+
+        .reviews-links {
+
+            a {
+                display: block;
+                text-transform: uppercase;
+                cursor: pointer;
+                margin-bottom: 15px;
+                font-size: 15px;
+                font-family: $font_open_sans;
+                line-height: 160.86%;
+                color: #727272;
+                transition: 0.2s;
+
+                &.active {
+                    background: linear-gradient(0deg, #E3AE67, #E3AE67), linear-gradient(0deg, #787878, #787878);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 5000px;
+                        left: -5015px;
+                        height: 1px;
+                        background: linear-gradient(0deg, #E3AE67, #E3AE67), linear-gradient(0deg, #787878, #787878);
+                        top: 50%;
+                        transform: translate(0%, -50%);
+                        animation-name: animLine;
+                        animation-duration: 1s;
+                        animation-fill-mode: forwards;
+                    }
+                }
+
+                &:hover {
+                    color: $primary_color;
+                    transition: 0.2s;
+                }
+            }
+
+        }
+    }
+
+    .title-section {
+        margin-top: 25px;
+
+
+        .num {
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            background: linear-gradient(0deg, #E3AE67, #E3AE67), linear-gradient(0deg, #787878, #787878);
+            font-family: $font_yeseva_one;
+            color: #fff;
+            font-size: 20px;
+            position: relative;
+            padding: 5px;
+
+        }
+
+        h2 {
+            font-size: 45px;
+            font-weight: normal;
+            font-family: $font_yeseva_one;
+            margin-left: 25px;
+
+            text-transform: uppercase;
+        }
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .bookmarks {
+        margin-top: 136px;
+        margin-right: 51px;
+
+
+        ul {
+            display: block;
+            padding: 5px 0;
+            margin: auto;
+
+            .owl-dot {
+                display: none;
+            }
+
+            li {
+                display: block;
+                text-transform: uppercase;
+                cursor: pointer;
+                margin-bottom: 15px;
+                font-size: 15px;
+                font-family: $font_open_sans;
+                line-height: 160.86%;
+
+
+                &.active {
+                    background: linear-gradient(0deg, #E3AE67, #E3AE67), linear-gradient(0deg, #787878, #787878);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 5000px;
+                        left: -5015px;
+                        height: 1px;
+                        background: linear-gradient(0deg, #E3AE67, #E3AE67), linear-gradient(0deg, #787878, #787878);
+                        top: 50%;
+                        transform: translate(0%, -50%);
+                        animation-name: animLine;
+                        animation-duration: 1s;
+                        animation-fill-mode: forwards;
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    .owlExample {
+        .item {
+
+            margin-left: -15px;
+            padding: 0px 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .img {
+                width: 850px;
+                height: 709px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .text {
+                width: 304px;
+                margin-top: 140px;
+                font-size: 15px;
+                margin-right: 60px;
+
+                .btn {
+                    text-transform: uppercase;
+                    text-align: center;
+                    margin-top: 25px;
+                    display: inline-block;
+                    color: #000;
+                    font-size: 12px;
+                    line-height: 120%;
+                    border: 1px solid $primary_color;
+                    font-family: $font_open_sans;
+                    border-radius: 6px;
+                    padding: 15px 38px;
+                    transition: 0.4s;
+                    font-weight: 500;
+                    box-shadow: 0px;
+                    background: none;
+
+                    &:hover {
+                        background: linear-gradient(35.73deg, #FFD092 23.19%, #FDC788 42.64%, #FBC076 54.2%, #F4BD73 82.59%, #F0BC7B 108.35%);
+                        color: #1E1E1E;
+                        transition: 0.4s;
+                        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+                        border-color: transparent;
+                    }
+                }
+            }
+
+
+            p {
+                margin-bottom: 10px;
+                font-family: $font_open_sans;
+                color: #000;
+                line-height: 120%;
+
+                &:first-child {
+                    background: linear-gradient(0deg, #E3AE67, #E3AE67), linear-gradient(0deg, #787878, #787878);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .owl-controls {
+            position: absolute;
+            top: 60px;
+            width: 100%;
+
+            @media (max-width: 767px) {
+                top: -90px;
+            }
+
+
+        }
+
+        .owl-nav {
+            display: none !important;
+        }
+    }
+
+}
+
+.reviews {
+
+    @media (max-width: 767px) {
+        .box-reviews.max-width {
+            padding: 0px;
+        }
+
+        .reviews .owlExample .item {
+            margin: 0;
+            padding: 0;
+        }
+
+        .title-links.d-flex {
+            flex-wrap: wrap;
+            padding-top: 110px;
+
+            .back-num {
+                display: none;
+            }
+
+            .reviews-links {
+                width: 100%;
+
+                ul {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    padding: 0 30px;
+
+                    a {
+                        font-size: 13px;
+
+                        &.active {
+                            &:before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .title-section {
+                width: 100%;
+                margin-bottom: 25px;
+                position: relative;
+
+                .num {
+                    width: 25%;
+                    padding-right: 35px;
+                    margin: 0;
+                    text-align: right;
+                }
+
+                h2 {
+                    font-size: 25px;
+                    margin: 0 14px 0 0;
+                }
+            }
+
+            .title-section.d-flex {
+                flex-direction: row-reverse;
+            }
+
+
+        }
+
+        .wedding-carousel.d-flex,
+        .corporate-carousel.d-flex,
+        .agency-carousel.d-flex {
+            flex-wrap: wrap;
+        }
+
+        .first-carousel-wedding,
+        .first-carousel-corporate,
+        .first-carousel-agency {
+            width: 100%;
+        }
+
+        .second-carousel-wedding,
+        .second-carousel-corporate,
+        .second-carousel-agency {
+            width: 100%;
+            margin-left: 33px;
+            height: 195px;
+        }
+
+        .second-carousel-wedding .slide-inner,
+        .second-carousel-corporate .slide-inner,
+        .second-carousel-agency .slide-inner {
+            height: 195px;
+        }
+
+        .owlExample .item .text {
+            width: 100%;
+            margin-top: 50px;
+            padding: 0 30px;
+            margin-right: 0px;
+        }
+
+        .owlExample .item .text .btn {
+            width: 100%;
+            margin-bottom: 37px;
+            padding: 15px 0px;
+        }
+
+        .second-carousel-wedding .owl-nav,
+        .second-carousel-corporate .owl-nav,
+        .second-carousel-agency .owl-nav {
+            display: flex !important;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            height: 50px;
+            margin-top: 29px;
+        }
+
+        .second-carousel-wedding .owl-nav .owl-prev,
+        .second-carousel-corporate .owl-nav .owl-prev,
+        .second-carousel-agency .owl-nav .owl-prev {
+            width: 35px;
+            height: 2px;
+            background-color: $primary_color;
+            position: relative;
+            top: 25px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 17.5px;
+                height: 2px;
+                left: -1px;
+                top: 5px;
+                background-color: #E3AE67;
+                transform: rotate(35deg);
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 17.5px;
+                height: 2px;
+                left: -1px;
+                top: -5px;
+                background-color: #E3AE67;
+                transform: rotate(-35deg);
+            }
+
+            &.disabled {
+                background-color: #999;
+
+                &:after {
+                    background-color: #999;
+                }
+
+                &:before {
+                    background-color: #999;
+                }
+            }
+
+
+        }
+
+        .second-carousel-wedding .owl-nav .owl-next,
+        .second-carousel-corporate .owl-nav .owl-next,
+        .second-carousel-agency .owl-nav .owl-next {
+            width: 35px;
+            height: 2px;
+            background-color: $primary_color;
+            position: relative;
+            top: 25px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 17.5px;
+                height: 2px;
+                right: -1px;
+                top: 5px;
+                background-color: #E3AE67;
+
+                transform: rotate(-35deg);
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 17.5px;
+                height: 2px;
+                right: -1px;
+                top: -5px;
+                background-color: #E3AE67;
+                transform: rotate(35deg);
+            }
+
+            &.disabled {
+                background-color: #999;
+
+                &:after {
+                    background-color: #999;
+                }
+
+                &:before {
+                    background-color: #999;
+                }
+            }
+
+
+        }
+
+        .owlExample .item .img {
+            width: 100%;
+            height: 195px;
+
+            img {
+                height: auto;
+            }
+        }
+
+        .bookmarks {
+            width: 100%;
+            margin: 0px;
+
+            ul {
+                display: flex;
+                flex-wrap: nowrap;
+                padding: 0 30px;
+                justify-content: space-between;
+
+                li {
+                    font-size: 13px;
+                    text-align: center;
+
+                    &.active {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 1400px) and (min-width: 1238px) {
+        .box-reviews.max-width {
+            margin: 0 0 0 auto;
+        }
+    }
+
+    @media (min-width: 1238px) and (max-width: 1400px) {
+        .box-reviews.max-width {
+            padding: 0 0 0 50px;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1238px) {
+
+        .box-reviews.max-width {
+            padding: 0 0 0 50px;
+        }
+
+        .second-carousel-wedding,
+        .second-carousel-corporate,
+        .second-carousel-agency {
+            width: 68%;
+        }
+
+        .title-links.d-flex {
+            padding-left: 50px;
+        }
+
+        .first-carousel-wedding,
+        .first-carousel-corporate,
+        .first-carousel-agency {
+            width: 27%;
+            height: 550px;
+        }
+
+        .owlExample .item {
+            margin-left: -15px;
+        }
+
+
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .box-reviews.max-width {
+            padding: 0px;
+        }
+
+        .reviews .owlExample .item {
+            margin: 0;
+            padding: 0;
+        }
+
+        .title-links.d-flex {
+            flex-wrap: wrap;
+            padding-top: 110px;
+
+            .back-num {
+                display: none;
+            }
+
+            .reviews-links {
+                width: 100%;
+
+                ul {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    padding: 0 30px;
+
+                    a {
+                        font-size: 13px;
+
+                        &.active {
+                            &:before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .title-section {
+                width: 100%;
+                margin-bottom: 25px;
+
+                .num {
+                    width: 35%;
+                    padding-right: 35px;
+                    margin: 0;
+                    text-align: right;
+                }
+
+                h2 {
+                    font-size: 25px;
+                    margin: 0 25px 0 0;
+                }
+            }
+
+            .title-section.d-flex {
+                flex-direction: row-reverse;
+                position: relative;
+            }
+
+
+        }
+
+        .wedding-carousel.d-flex,
+        .corporate-carousel.d-flex,
+        .agency-carousel.d-flex {
+            flex-wrap: wrap;
+        }
+
+        .first-carousel-wedding,
+        .first-carousel-corporate,
+        .first-carousel-agency {
+            width: 100%;
+        }
+
+        .second-carousel-wedding,
+        .second-carousel-corporate,
+        .second-carousel-agency {
+            width: 100%;
+            padding-left: 30px;
+        }
+
+        .owlExample .item .text {
+            width: 100%;
+            margin-top: 50px;
+            padding: 0 30px;
+        }
+
+        .owlExample .item .text .btn {
+            width: 50%;
+            display: block;
+            margin: 0 auto 37px auto;
+            padding: 15px 0px;
+        }
+
+        .second-carousel-wedding .owl-nav,
+        .second-carousel-corporate .owl-nav,
+        .second-carousel-agency .owl-nav {
+            display: flex !important;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            height: 50px;
+            margin-top: 29px;
+        }
+
+        .second-carousel-wedding .owl-nav .owl-prev,
+        .second-carousel-corporate .owl-nav .owl-prev,
+        .second-carousel-agency .owl-nav .owl-prev {
+            width: 35px;
+            height: 2px;
+            background-color: $primary_color;
+            position: relative;
+            top: 25px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 17.5px;
+                height: 2px;
+                left: -1px;
+                top: 5px;
+                background-color: #E3AE67;
+                transform: rotate(35deg);
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 17.5px;
+                height: 2px;
+                left: -1px;
+                top: -5px;
+                background-color: #E3AE67;
+                transform: rotate(-35deg);
+            }
+
+            &.disabled {
+                background-color: #999;
+
+                &:after {
+                    background-color: #999;
+                }
+
+                &:before {
+                    background-color: #999;
+                }
+            }
+
+
+        }
+
+        .second-carousel-wedding .owl-nav .owl-next,
+        .second-carousel-corporate .owl-nav .owl-next,
+        .second-carousel-agency .owl-nav .owl-next {
+            width: 35px;
+            height: 2px;
+            background-color: $primary_color;
+            position: relative;
+            top: 25px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 17.5px;
+                height: 2px;
+                right: -1px;
+                top: 5px;
+                background-color: #E3AE67;
+
+                transform: rotate(-35deg);
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 17.5px;
+                height: 2px;
+                right: -1px;
+                top: -5px;
+                background-color: #E3AE67;
+                transform: rotate(35deg);
+            }
+
+            &.disabled {
+                background-color: #999;
+
+                &:after {
+                    background-color: #999;
+                }
+
+                &:before {
+                    background-color: #999;
+                }
+            }
+
+
+        }
+
+        .owlExample .item .img {
+            width: 100%;
+            height: 350px;
+
+            img {
+                height: auto;
+            }
+        }
+
+        .lead-diary .bookmarks ul {
+            margin-left: 30px;
+        }
+
+        .bookmarks {
+            width: 100%;
+            margin: 50px 0;
+
+            ul {
+                display: flex;
+                flex-wrap: nowrap;
+                padding: 0 30px;
+                justify-content: space-between;
+
+                li {
+                    font-size: 13px;
+
+                    &.active {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,124 @@
+$primary_color: #E3AE67;
+
+$font_open_sans: 'Open Sans',
+sans-serif;
+
+$font_yeseva_one: 'Yeseva One',
+cursive;
+
+
+.partners {
+
+
+    .max-width-2 {
+        max-width: 485px;
+        margin: auto;
+        margin-top: 50px;
+        position: relative;
+        top: 25px;
+    }
+
+    .title-txt {
+        margin-top: 25px;
+        font-size: 15px;
+        line-height: 120%;
+        font-family: $font_open_sans;
+        color: #343434;
+    }
+
+    .back-num {
+        position: absolute;
+    }
+
+    .title-section {
+        margin-top: 25px;
+
+        .num {
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            background:linear-gradient(0deg, #E3AE67, #E3AE67), linear-gradient(0deg, #787878, #787878);
+            font-family: $font_yeseva_one;
+            color: #fff;
+            font-size: 20px;
+            position: relative;
+            padding: 5px;
+
+        }
+
+        h2 {
+            font-size: 45px;
+            font-weight: normal;
+            font-family: $font_yeseva_one;
+            margin-left: 25px;
+
+            text-transform: uppercase;
+        }
+    }
+
+    .pertners-logos {
+        .d-flex {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .item {
+            width: 31%;
+            margin-bottom: 25px;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                box-shadow: 0 0 8px #999;
+                width: 86px;
+                line-height: 86px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 767px) {
+    .partners {
+        position: relative;
+
+
+        .title-section {
+            &.d-flex {
+                align-items: center;
+            }
+
+            .num {
+                width: 25%;
+                padding-left: 35px;
+                margin: 0px;
+            }
+
+            h2 {
+                font-size: 25px;
+                margin-top: 0px;
+                margin-left: 14px;
+            }
+        }
+
+        .title-txt {
+            display: none;
+        }
+
+        .pertners-logos .d-flex {
+            justify-content: center
+        }
+
+        .pertners-logos .item {
+            width: 35%;
+        }
+
+
+    }
+
+
+}
