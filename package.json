@@ -9,7 +9,7 @@
     "gulp-connect": "^5.7.0",
     "gulp-connect-reproxy": "0.0.98",
     "gulp-sass": "^4.0.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-pixel-perfect": "^1.0.0",
     "jquery-validation": "^1.19.1",
     "swiper": "^4.5.0"
