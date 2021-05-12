@@ -12,7 +12,7 @@
     "jquery": "^3.4.1",
     "jquery-pixel-perfect": "^1.0.0",
     "jquery-validation": "^1.19.1",
-    "swiper": "^4.5.0"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "gulp-autoprefixer": "6.0.0",
